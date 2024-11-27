@@ -23,6 +23,11 @@ public class VentaController {
         ResponseEntity<ProductResponseRest> response = productServicesIMPL.AllProducts();
         return response;
     }
+    @GetMapping("/buscar/{id}")
+    public ResponseEntity<ProductResponseRest> GetById(@PathVariable Long id) {
+        ResponseEntity<ProductResponseRest> response = productServicesIMPL.GetById(id);
+        return response;
+    }
 
     // Obtener todas las ventas
     @GetMapping
