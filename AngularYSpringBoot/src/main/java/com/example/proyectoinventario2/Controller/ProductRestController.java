@@ -5,7 +5,7 @@ package com.example.proyectoinventario2.Controller;
 import com.example.proyectoinventario2.model.Product;
 import com.example.proyectoinventario2.response.CategoryResponseRest;
 import com.example.proyectoinventario2.response.ProductResponseRest;
-import com.example.proyectoinventario2.services.ProductServicesIMPL;
+import com.example.proyectoinventario2.services.ProductServices;
 import com.example.proyectoinventario2.util.CategoryExcel;
 import com.example.proyectoinventario2.util.ProductExcel;
 import com.example.proyectoinventario2.util.util;
@@ -23,7 +23,7 @@ import java.io.IOException;
 public class ProductRestController {
 
     @Autowired
-    private ProductServicesIMPL productServicesIMPL;
+    private ProductServices productServicesIMPL;
     private ProductExcel productExcel;
 
     @GetMapping("/Obtener")

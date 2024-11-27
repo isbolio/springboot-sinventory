@@ -23,12 +23,7 @@ public class DetalleVenta {
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Product producto; // Producto asociado al detalle
 
-    @Column(nullable = false)
     private int cantidad; // Cantidad del producto vendido
-
-    @Column(nullable = false)
     private double precio; // Precio unitario del producto
-
-    @Column(nullable = false)
     private double subtotal; // Subtotal calculado (precio cantidad)
 }
