@@ -1,7 +1,9 @@
 package com.example.proyectoinventario2.Controller;
 
 import com.example.proyectoinventario2.model.Venta;
+import com.example.proyectoinventario2.response.ProductResponseRest;
 import com.example.proyectoinventario2.response.VentaResponseRest;
+import com.example.proyectoinventario2.services.ProductServices;
 import com.example.proyectoinventario2.services.VentaServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +16,13 @@ public class VentaController {
 
     @Autowired
     private VentaServices ventaServices;
+    private ProductServices productServicesIMPL;
+
+    @GetMapping("/Obtener")
+    public ResponseEntity<ProductResponseRest> AllCategories() {
+        ResponseEntity<ProductResponseRest> response = productServicesIMPL.AllProducts();
+        return response;
+    }
 
     // Obtener todas las ventas
     @GetMapping
